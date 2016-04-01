@@ -44,7 +44,7 @@ add_action('admin_enqueue_scripts', 'load_admin_custom_enqueue');
 /* Add Theme Support for Post Formats, Post Thumbnails and Automatic Feed Links */
 /***********************************************************************************************/
 	add_theme_support('post-formats', array('link', 'quote', 'gallery', 'video'));
-	add_theme_support('post-thumbnails', array('post','page','banner','galeria-images'));
+	add_theme_support('post-thumbnails', array('post','page','banner','galeria-images','programas'));
 	set_post_thumbnail_size(210, 210, true);
 	add_image_size('custom-blog-image', 784, 350);
 	add_theme_support('automatic-feed-links');
@@ -174,12 +174,35 @@ function gotas_create_post_type(){
 		'menu_icon'   => 'dashicons-video-alt3'
 	);
 
+	/*|>>>>>>>>>>>>>>>>>>>> PROGRAMAS <<<<<<<<<<<<<<<<<<<<|*/
+	$labels5 = array(
+		'name'               => __('Programas'),
+		'singular_name'      => __('Programa'),
+		'add_new'            => __('Nuevo Programa'),
+		'add_new_item'       => __('Agregar nuevo Programa'),
+		'edit_item'          => __('Editar Programa'),
+		'view_item'          => __('Ver Programa'),
+		'search_items'       => __('Buscar Programa'),
+		'not_found'          => __('Programa no encontrado'),
+		'not_found_in_trash' => __('Programa no encontrado en la papelera'),
+	);
+
+	$args5 = array(
+		'labels'      => $labels5,
+		'has_archive' => true,
+		'public'      => true,
+		'hierachical' => false,
+		'supports'    => array('title','editor','excerpt','custom-fields','thumbnail','page-attributes'),
+		'taxonomies'  => array('post-tag'),
+		'menu_icon'   => 'dashicons-admin-multisite'
+	);
 	
 	/*|>>>>>>>>>>>>>>>>>>>> REGISTRAR  <<<<<<<<<<<<<<<<<<<<|*/
 	register_post_type('banner',$args);
 	register_post_type('oficina',$args2);
 	register_post_type('galeria-images',$args3);
 	register_post_type('galeria-videos',$args4);
+	register_post_type('programas',$args5);
 	
 	flush_rewrite_rules();
 }

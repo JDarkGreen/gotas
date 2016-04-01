@@ -1,4 +1,4 @@
-<?php /*Template Name: Page Nosotros Plantilla*/ ?>
+<?php /*Template Name: Page Blog Plantilla*/ ?>
 
 <!-- Header -->
 <?php get_header(); 
@@ -34,7 +34,38 @@
 		
 		<!-- Contenido de la Página -->
 		<section class="sectionPage__content">
-			<?= $post->post_content; ?>
+			<div class="row">
+			<?php  
+				//Traer todos los posts 
+				$args = array(
+					'post_type'      => 'post',
+					'posts_per_page' => -1,
+				);
+
+				$query = new WP_Query( $args ); var_dump($query);
+
+
+				if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
+			?>
+				<article class="sectionBlog__article col-xs-12 col-md-4">
+					<!-- Imagen -->
+					<?php if( has_post_thumbnail() ) : ?>
+						<?php the_post_thumbnail('full',array('class'=>'img-responsive')); ?>
+					<?php endif; ?>
+
+					<!-- Titulo -->
+					<h3><?= get_the_title(); ?></h3>
+					<!-- Fecha y autor -->
+					<p class="paragraph-info-article">
+						<span class="text-left">On: <?= get_the_date('l');  ?></span>
+					</p>
+					<!-- Contenido -->
+
+				</article><!-- /.sectionBlog__article -->
+
+			<?php endwhile; endif; wp_reset_postdata(); ?>
+
+			</div> <!-- /<div class="row"></div> -->
 		</section><!-- /. sectionPage__content -->
 
 		<!-- Separador  -->

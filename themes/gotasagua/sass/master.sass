@@ -14,17 +14,18 @@
 /***************************************************************************************/
 
 //colores
-$color_green_lemon : #7cb041
-$color_lemon       : #e4feb7
-$color_textgreen   : #4e7e08
-$color_linegreen   : #96c34c
+$color_green_lemon    : #7cb041
+$color_lemon          : #e4feb7
+$color_textgreen      : #4e7e08
+$color_linegreen      : #96c34c
 
-$color_skyblue     : #2cadee
-$color_darkskyblue : #1393d4 
-$color_titleskyblue: #15a1ec
-$color_titlepagesky: #2e90d1
+$color_skyblue        : #2cadee
+$color_darkskyblue    : #1393d4 
+$color_titleskyblue   : #15a1ec
+$color_titlepagesky   : #2e90d1
+$color_titlearticlesky: #26b8f1
 
-$color_textgray    : #b0afad
+$color_textgray       : #b0afad
 
 /***************************************************************************************/
 /**-------------------------- RESET ---------------------------------------------**/
@@ -426,7 +427,11 @@ body,html
 	&:hover 
 		img 
 			+scale( 1.2 )
-	
+
+.mainContent__gallery__article
+	margin  : 0 15px 15px
+	overflow: hidden
+	width   : 30%
 
 //articulos de imagenes 
 .mainContent__gallery__article--images
@@ -472,3 +477,31 @@ body,html
 		display   : block 
 		height    : 4px 
 		width     : 90px
+
+//contenedor de pagina de informacion 
+.sectionPage__content
+	padding: 0 20px
+
+/***************************************************************************************/
+/**-------------------------- SECCION PROGRAMAS --------------------------------------**/
+/***************************************************************************************/
+
+//articulo o item de cada programa
+.sectionPrograma__article
+	margin    : 0 auto 50px 
+	word-break: break-all
+
+	figure 
+		margin: 0 20px 20px
+
+//informacion y contenido dentro de articulo
+.sectionPrograma__article__info
+	h3 
+		color      : $color_titlearticlesky
+		font-size  : 22px 
+		font-weight: 500  
+		margin     : 0 auto
+
+	p 
+		color    : $color_textgray
+		font-size: 14px
