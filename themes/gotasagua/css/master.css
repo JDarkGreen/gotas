@@ -1,0 +1,519 @@
+@charset "UTF-8";
+/************************************************************************************** */
+/**-------------------------- FONT FACE  ---------------------------------------------* */
+/************************************************************************************** */
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+/************************************************************************************** */
+/**-------------------------- VARIALBLES ---------------------------------------------* */
+/************************************************************************************** */
+/************************************************************************************** */
+/**-------------------------- RESET ---------------------------------------------* */
+/************************************************************************************** */
+/* line 33, ../sass/master.sass */
+body, html {
+  font-size: 16px;
+  width: 100%;
+}
+
+/************************************************************************************** */
+/**---------------------- CLASES Y OBJETOS ------------------------------------------* */
+/************************************************************************************** */
+/* line 43, ../sass/master.sass */
+.clearfix {
+  clear: both;
+}
+
+/* line 47, ../sass/master.sass */
+.position-relative {
+  position: relative;
+}
+
+/* line 51, ../sass/master.sass */
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/* line 56, ../sass/master.sass */
+.img-responsive {
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 61, ../sass/master.sass */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+/* line 63, ../sass/master.sass */
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+/* line 65, ../sass/master.sass */
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* line 67, ../sass/master.sass */
+.text-justify {
+  text-align: justify;
+}
+
+/* line 69, ../sass/master.sass */
+.text-center {
+  text-align: center;
+}
+
+/* line 71, ../sass/master.sass */
+.text-left {
+  text-align: left;
+}
+
+/* line 73, ../sass/master.sass */
+.text-right {
+  text-align: right;
+}
+
+/* line 77, ../sass/master.sass */
+.pull-left {
+  float: left;
+}
+
+/* line 79, ../sass/master.sass */
+.pull-right {
+  float: right;
+}
+
+/* line 85, ../sass/master.sass */
+.btn__green {
+  background: url("../images/btn_green.png") no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  display: block;
+  height: 38px;
+  text-decoration: none;
+  width: 135px;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+/* line 95, ../sass/master.sass */
+.btn__green:hover {
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+/* line 100, ../sass/master.sass */
+.line-separator {
+  background: url("../images/linea-separadora.jpg") repeat;
+  display: block;
+  height: 6px;
+  margin: 30px auto;
+  width: 95%;
+}
+
+/* line 110, ../sass/master.sass */
+.item-flex {
+  display: flex;
+}
+
+/* line 112, ../sass/master.sass */
+.item-align-center {
+  align-items: center;
+  justify-content: center;
+}
+
+/************************************************************************************** */
+/**----------------------- HEADER        ---------------------------------------------* */
+/************************************************************************************** */
+/* line 121, ../sass/master.sass */
+.mainHeader {
+  background: white;
+  min-height: 120px;
+  padding: 5px 0 0;
+  position: relative;
+}
+/* line 128, ../sass/master.sass */
+.mainHeader .extra-info-header {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+/* line 134, ../sass/master.sass */
+.mainHeader__content {
+  position: relative;
+}
+
+/* line 138, ../sass/master.sass */
+.logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/************************************************************************************** */
+/**----------------------- REDES SOCIALES --------------------------------------------* */
+/************************************************************************************** */
+/* line 148, ../sass/master.sass */
+.social-links {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+/* line 153, ../sass/master.sass */
+.social-links li {
+  display: inline-block;
+  padding: 0 6px;
+}
+/* line 157, ../sass/master.sass */
+.social-links li a {
+  display: block;
+  height: 30px;
+  width: 30px;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+/* line 163, ../sass/master.sass */
+.social-links li a:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/************************************************************************************** */
+/**-------------------------- NAVIGATION ---------------------------------------------* */
+/************************************************************************************** */
+/* line 175, ../sass/master.sass */
+.mainNav {
+  background: url("../images/bg-nav.jpg") repeat;
+}
+/* line 177, ../sass/master.sass */
+.mainNav ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+/* line 182, ../sass/master.sass */
+.mainNav ul li {
+  display: inline-block;
+  padding: 0 25px;
+  position: relative;
+}
+/* line 188, ../sass/master.sass */
+.mainNav ul li ul.sub-menu {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 5px solid #1393d4;
+  left: 0;
+  margin-top: 10%;
+  min-width: 190px;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+/* line 202, ../sass/master.sass */
+.mainNav ul li ul.sub-menu li:hover a, .mainNav ul li ul.sub-menu li.current-menu-item a, .mainNav ul li ul.sub-menu li.current_page_item a {
+  color: #e4feb7;
+}
+/* line 204, ../sass/master.sass */
+.mainNav ul li ul.sub-menu li a {
+  color: white;
+  font-size: 14px;
+  padding: 12px 0;
+}
+/* line 210, ../sass/master.sass */
+.mainNav ul li a {
+  color: white;
+  display: block;
+  font-size: 1em;
+  padding: 16px 0;
+  text-decoration: none;
+  -moz-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+/* line 220, ../sass/master.sass */
+.mainNav ul li:hover a, .mainNav ul li.current-menu-item a, .mainNav ul li.current_page_item a {
+  color: #e4feb7;
+}
+/* line 226, ../sass/master.sass */
+.mainNav ul li:hover ul.sub-menu {
+  margin-top: 0;
+  z-index: 999;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+/************************************************************************************** */
+/**-------------------------- FOOTER     ---------------------------------------------* */
+/************************************************************************************** */
+/* line 239, ../sass/master.sass */
+.mainFooter {
+  margin: 15px auto 0;
+}
+
+/* line 243, ../sass/master.sass */
+.mainFooter__content {
+  margin: 0 auto 17px;
+  max-width: 1027px;
+  width: 100%;
+}
+
+/* line 251, ../sass/master.sass */
+.mainFooter__article h3 {
+  font-size: 0.875em;
+  margin: 0 auto;
+}
+/* line 256, ../sass/master.sass */
+.mainFooter__article h3.title--skyblue {
+  color: #15a1ec;
+  font-size: 600;
+  margin: 0 auto 5px;
+}
+/* line 262, ../sass/master.sass */
+.mainFooter__article p {
+  font-size: 0.75em;
+  line-height: 17px;
+  margin: 0 auto;
+}
+/* line 267, ../sass/master.sass */
+.mainFooter__article p.info {
+  line-height: 1.5em;
+}
+/* line 271, ../sass/master.sass */
+.mainFooter__article span {
+  display: block;
+  margin: 0 0 5px;
+}
+/* line 276, ../sass/master.sass */
+.mainFooter__article .image-info-footer {
+  margin: 0 0 5px 5px;
+  max-width: 120px;
+}
+
+/* line 281, ../sass/master.sass */
+.mainFooter__bg {
+  overflow: hidden;
+  width: 100%;
+}
+/* line 284, ../sass/master.sass */
+.mainFooter__bg img {
+  display: inline-block;
+  width: 50%;
+}
+/* line 288, ../sass/master.sass */
+.mainFooter__bg .rotateY {
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/************************************************************************************** */
+/**-------------------------- MAIN WRAPPER--------------------------------------------* */
+/************************************************************************************** */
+/* line 295, ../sass/master.sass */
+.mainWrapper {
+  background: url("../images/fondo.png") no-repeat;
+  background-size: 100% 100%;
+  min-height: 100px;
+  padding: 10px 0 0;
+}
+
+/* line 302, ../sass/master.sass */
+.mainWrapper__content {
+  background: white;
+  border: 1px solid #1393d4;
+  margin: 0 auto;
+  max-width: 1027px;
+  padding: 10px 10px 45px;
+  width: 100%;
+}
+
+/* line 311, ../sass/master.sass */
+.mainWrapper__title {
+  color: #15a1ec;
+  font-size: 1.5em;
+  margin: 0 auto;
+}
+
+/************************************************************************************** */
+/**--------------------------       BOTONERAS    ------------------------------------* */
+/************************************************************************************** */
+/* line 321, ../sass/master.sass */
+.sectionBotoneras {
+  padding: 0 50px;
+}
+
+/* line 324, ../sass/master.sass */
+.itemBotonera__link {
+  padding: 0 6px;
+}
+
+/************************************************************************************** */
+/**-------------------------- PORTADA    ---------------------------------------------* */
+/************************************************************************************** */
+/* line 336, ../sass/master.sass */
+.sectionBanner .bx-wrapper .bx-viewport {
+  -moz-box-shadow: 0;
+  -webkit-box-shadow: 0;
+  box-shadow: 0;
+  border: none;
+  left: 0;
+}
+/* line 341, ../sass/master.sass */
+.sectionBanner .bx-wrapper .bx-viewport ul {
+  margin: 0 auto;
+}
+/* line 346, ../sass/master.sass */
+.sectionBanner .item-caption {
+  margin: -50px 0 0 0;
+  position: absolute;
+  top: 50%;
+}
+/* line 352, ../sass/master.sass */
+.sectionBanner .item-caption h2 {
+  background: #2cadee;
+  color: white;
+  font-size: 1.875em;
+  margin: 0 auto 11px;
+  padding: 17px 22px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 361, ../sass/master.sass */
+.sectionBanner .item-caption p {
+  background: #7cb041;
+  color: white;
+  font-size: 0.875em;
+  margin: 0 auto;
+  padding: 11px 16px;
+  font-weight: 600;
+}
+
+/* line 374, ../sass/master.sass */
+.sectionHome__welcome {
+  background: url("../images/bg-gray-degrade.jpg") repeat;
+  padding: 28px 13px;
+}
+/* line 378, ../sass/master.sass */
+.sectionHome__welcome figure {
+  float: right;
+  margin: 0 0 0 10px;
+  max-width: 198px;
+}
+/* line 384, ../sass/master.sass */
+.sectionHome__welcome h2 {
+  margin: 0 0 22px;
+}
+/* line 388, ../sass/master.sass */
+.sectionHome__welcome p {
+  color: #b0afad;
+  font-size: 0.8125em;
+  margin: 0 auto;
+}
+/* line 393, ../sass/master.sass */
+.sectionHome__welcome p.sub-title {
+  color: #4e7e08;
+  margin: 0 auto 22px;
+}
+/* line 396, ../sass/master.sass */
+.sectionHome__welcome p.sub-title strong {
+  font-size: 16px;
+}
+
+/* line 400, ../sass/master.sass */
+.sectionHome__facebook {
+  background: url("../images/facebook/bg-container.jpg") repeat;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/************************************************************************************** */
+/**-------------------------- GALER├ìA MULTIMEDIA--------------------------------------* */
+/************************************************************************************** */
+/* line 413, ../sass/master.sass */
+.mainContent__gallery {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+/* line 422, ../sass/master.sass */
+.section-wrapper__multimedia__article img {
+  -moz-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+/* line 427, ../sass/master.sass */
+.section-wrapper__multimedia__article:hover img {
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+
+/* line 432, ../sass/master.sass */
+.mainContent__gallery__article--images {
+  margin: 0 1px 1px;
+  overflow: hidden;
+  width: 33%;
+}
+/* line 438, ../sass/master.sass */
+.mainContent__gallery__article--images h3 {
+  -moz-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+  background: #1393d4;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 999;
+}
+
+/************************************************************************************** */
+/**-------------------------- P├üGINAS COMUNES  ---------------------------------------* */
+/************************************************************************************** */
+/* line 457, ../sass/master.sass */
+.sectionBannerSup figure {
+  margin: 0 auto;
+}
+
+/* line 462, ../sass/master.sass */
+.sectionBannerSup__tittle {
+  background: #2e90d1;
+  color: white;
+  margin: -33px auto 0;
+  padding: 15px 22px 15px 45px;
+  position: absolute;
+  top: 50%;
+}
+/* line 470, ../sass/master.sass */
+.sectionBannerSup__tittle .line-green {
+  background: #96c34c;
+  display: block;
+  height: 4px;
+  width: 90px;
+}

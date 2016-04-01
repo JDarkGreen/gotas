@@ -1,0 +1,474 @@
+
+
+@import "compass/css3"
+
+/***************************************************************************************/
+/**-------------------------- FONT FACE  ---------------------------------------------**/
+/***************************************************************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Oswald)
+
+
+/***************************************************************************************/
+/**-------------------------- VARIALBLES ---------------------------------------------**/
+/***************************************************************************************/
+
+//colores
+$color_green_lemon : #7cb041
+$color_lemon       : #e4feb7
+$color_textgreen   : #4e7e08
+$color_linegreen   : #96c34c
+
+$color_skyblue     : #2cadee
+$color_darkskyblue : #1393d4 
+$color_titleskyblue: #15a1ec
+$color_titlepagesky: #2e90d1
+
+$color_textgray    : #b0afad
+
+/***************************************************************************************/
+/**-------------------------- RESET ---------------------------------------------**/
+/***************************************************************************************/
+
+body,html
+	font-size: 16px
+	width    : 100%
+
+
+/***************************************************************************************/
+/**---------------------- CLASES Y OBJETOS ------------------------------------------**/
+/***************************************************************************************/
+
+//clearfix
+.clearfix
+	clear: both
+
+//position
+.position-relative
+	position: relative
+
+//.container
+.container
+	margin   : 0 auto 
+	max-width: 1170px
+
+//IMAGEN
+.img-responsive
+	height   : auto 
+	max-width: 100%
+
+//>>>>>>>>>>> TEXTO >>>>>>>>>>>>>>>>>>>>>>
+.text-uppercase
+	text-transform: uppercase
+.text-lowercase
+	text-transform: lowercase
+.text-capitalize
+	text-transform: capitalize
+.text-justify
+	text-align: justify
+.text-center
+	text-align: center
+.text-left
+	text-align: left
+.text-right
+	text-align: right
+
+//>>>>>>>>>>> FLOATS >>>>>>>>>>>>>>>>>>>>>>
+.pull-left
+	float: left
+.pull-right
+	float: right 
+
+//>>>>>>>>>>> BOTONES >>>>>>>>>>>>>>>>>>>>>>
+
+//boton green
+.btn__green
+	background     : url('../images/btn_green.png') no-repeat
+	background-size: 100% 100%
+	color          : white 
+	display        : block 
+	height         : 38px 
+	text-decoration: none 
+	width          : 135px
+	+transition( all 300ms ease )
+
+	&:hover 
+		+scale( 1.1 )
+
+//>>>>>>>>>>> LINEA SEPARADORA >>>>>>>>>>>>>>>>>>>>>>
+
+.line-separator
+	background: url('../images/linea-separadora.jpg') repeat
+	display   : block 
+	height    : 6px 
+	margin    : 30px auto 
+	width     : 95% 
+
+
+//>>>>>>>>>>> ALL FLEX CSS >>>>>>>>>>>>>>>>>>>>>>
+
+.item-flex
+	display: flex
+.item-align-center
+	align-items    : center 
+	justify-content: center 
+
+/***************************************************************************************/
+/**----------------------- HEADER        ---------------------------------------------**/
+/***************************************************************************************/
+
+//mainHeader
+.mainHeader
+	background: white 
+	min-height: 120px
+	padding   : 5px 0 0 
+	position  : relative
+
+	//extra informacion redes sociales heade
+	.extra-info-header
+		position: absolute 
+		right   : 0
+		top     : 20px 		
+
+//contenedor
+.mainHeader__content
+	position: relative
+
+//logo
+.logo 
+	display   : block 
+	margin    : 0 auto
+	text-align: center
+
+/***************************************************************************************/
+/**----------------------- REDES SOCIALES --------------------------------------------**/
+/***************************************************************************************/
+
+//ul
+.social-links
+	list-style-type: none
+	margin         : 0 auto 
+	padding        : 0
+
+	li 
+		display: inline-block
+		padding: 0 6px
+
+		a
+			display: block  
+			height : 30px 
+			width  : 30px 
+			+transition( all 300ms ease )
+
+			&:hover 
+				+opacity( 0.8 )
+
+.social-links--header
+
+
+
+/***************************************************************************************/
+/**-------------------------- NAVIGATION ---------------------------------------------**/
+/***************************************************************************************/
+
+//nav
+.mainNav
+	background: url('../images/bg-nav.jpg') repeat
+	ul
+		list-style-type: none
+		margin         : 0 auto 
+		padding        : 0
+
+		li 	
+			display : inline-block
+			padding : 0 25px
+			position: relative
+
+			//submenu
+			ul.sub-menu
+				+opacity(0)
+				+transition( all 200ms ease )
+				background   : rgba(0,0,0,.8)
+				border-bottom: 5px solid $color_darkskyblue
+				left         : 0
+				margin-top   : 10%
+				min-width    : 190px
+				overflow     : hidden
+				position     : absolute
+				z-index      : -1
+
+				li 
+					&:hover,&.current-menu-item,&.current_page_item
+						a 
+							color: $color_lemon
+					a 
+						color    : white 
+						font-size: 14px
+						padding  : 12px 0
+						
+
+			a 
+				color          : white 
+				display        : block 
+				font-size      : 1em 
+				padding        : 16px 0
+				text-decoration: none
+				+transition( all 500ms ease ) 
+
+			//actual o activo item
+			&:hover,&.current-menu-item,&.current_page_item
+				a 
+					color: $color_lemon
+
+			//hover
+			&:hover 
+				//desplegar submenu
+				ul.sub-menu
+					margin-top: 0
+					z-index   : 999
+					+opacity(1)
+
+
+
+
+/***************************************************************************************/
+/**-------------------------- FOOTER     ---------------------------------------------**/
+/***************************************************************************************/
+
+//footer
+.mainFooter
+	margin: 15px auto 0
+
+//contenedor de informacion del footer
+.mainFooter__content
+	margin   : 0 auto 17px
+	max-width: 1027px
+	width    : 100% 
+
+//>>ARTICULO DE FOOTER -- ITEMS DE INFORMACION
+.mainFooter__article
+	//titulo
+	h3 
+		font-size: 0.875em
+		margin   : 0 auto
+
+		//en otro color 
+		&.title--skyblue
+			color    : $color_titleskyblue
+			font-size: 600
+			margin   : 0 auto 5px 
+
+	//parrafo
+	p 
+		font-size  : 0.75em
+		line-height: 17px 
+		margin     : 0 auto
+
+		&.info 
+			line-height: 1.5em
+
+	//span 
+	span 
+		display: block
+		margin : 0 0 5px 
+
+	//IMAGEN de informacion de footer - figure
+	.image-info-footer
+		margin   : 0 0 5px 5px
+		max-width: 120px 
+
+//imagen background footer 
+.mainFooter__bg
+	overflow: hidden
+	width   : 100%
+	img
+		display: inline-block
+		width  : 50%
+
+	.rotateY
+		+rotateY(180deg)
+
+
+/***************************************************************************************/
+/**-------------------------- MAIN WRAPPER--------------------------------------------**/
+/***************************************************************************************/
+.mainWrapper
+	background     : url('../images/fondo.png') no-repeat
+	background-size: 100% 100% 
+	min-height     : 100px 
+	padding        : 10px 0 0 
+
+//contenedor de informacion del wrapper
+.mainWrapper__content
+	background: white 
+	border    : 1px solid $color_darkskyblue
+	margin    : 0 auto 
+	max-width : 1027px 
+	padding   : 10px 10px 45px
+	width     : 100%
+
+//titulos comunes skyblue 
+.mainWrapper__title
+	color    : $color_titleskyblue
+	font-size: 1.5em 
+	margin   : 0 auto 
+
+
+/***************************************************************************************/
+/**--------------------------       BOTONERAS    ------------------------------------**/
+/***************************************************************************************/
+
+.sectionBotoneras
+	padding: 0 50px
+//items
+.itemBotonera__link
+	padding: 0 6px 
+
+
+/***************************************************************************************/
+/**-------------------------- PORTADA    ---------------------------------------------**/
+/***************************************************************************************/
+
+
+//BANNER PRINCIPAL
+.sectionBanner
+	.bx-wrapper
+		.bx-viewport
+			+box-shadow(0)
+			border: none 
+			left  : 0 
+
+			ul 
+				margin: 0 auto
+
+
+	//captiones o informacion de cada banner
+	.item-caption
+		margin  : -50px 0 0 0
+		position: absolute
+		top     : 50%
+
+		//titulo
+		h2
+			background: $color_skyblue
+			color     : white 
+			font-size : 1.875em
+			margin    : 0 auto 11px 
+			padding   : 17px 22px
+			+border-radius( 10px ) 
+
+		//parrafo
+		p
+			background : $color_green_lemon
+			color      : white 
+			font-size  : 0.875em
+			margin     : 0 auto 
+			padding    : 11px 16px
+			font-weight: 600
+
+
+//HoME PRINCIPAL
+.sectionHome
+
+//bienvenidos
+.sectionHome__welcome
+	background: url('../images/bg-gray-degrade.jpg') repeat
+	padding   : 28px 13px
+
+	figure 
+		float    : right
+		margin   : 0 0 0 10px 
+		max-width: 198px
+
+	//titulo
+	h2
+		margin: 0 0 22px
+
+	//parrafos
+	p 
+		color    : $color_textgray
+		font-size: 0.8125em
+		margin   : 0 auto 
+
+		&.sub-title
+			color : $color_textgreen
+			margin: 0 auto 22px
+			strong 
+				font-size: 16px
+
+//Seccion Facebook Portada
+.sectionHome__facebook
+	background: url('../images/facebook/bg-container.jpg') repeat
+	max-width : 100%
+	overflow  : hidden
+	padding   : 10px
+	+border-radius( 10px )
+
+
+/***************************************************************************************/
+/**-------------------------- GALERÍA MULTIMEDIA--------------------------------------**/
+/***************************************************************************************/
+
+//section
+.mainContent__gallery
+	display        : flex
+	flex-flow      : wrap
+	justify-content: center
+	margin         : 0 auto 20px
+
+//contenedor de imagenes multimedia
+.section-wrapper__multimedia__article
+	//imagen
+	img
+		+transition (all 600ms ease)
+
+	//hover
+	&:hover 
+		img 
+			+scale( 1.2 )
+	
+
+//articulos de imagenes 
+.mainContent__gallery__article--images
+	margin  : 0 1px 1px
+	overflow: hidden
+	width   : 33%
+	
+	//titulo
+	h3
+		+transition (all 600ms ease)
+		background : $color_darkskyblue
+		color      : white
+		font-family: "Oswald", sans-serif
+		font-size  : 14px
+		margin     : 0 auto
+		padding    : 20px
+		position   : relative
+		z-index    : 999
+
+
+/***************************************************************************************/
+/**-------------------------- PÁGINAS COMUNES  ---------------------------------------**/
+/***************************************************************************************/
+
+//BANNER SUPERIOR
+.sectionBannerSup
+	//image
+	figure
+		margin: 0 auto
+		
+
+//titulo
+.sectionBannerSup__tittle
+	background: $color_titlepagesky
+	color     : white 
+	margin    : -33px auto 0
+	padding   : 15px 22px 15px 45px
+	position  : absolute
+	top       : 50%
+	//linea verde
+	.line-green
+		background: $color_linegreen
+		display   : block 
+		height    : 4px 
+		width     : 90px
