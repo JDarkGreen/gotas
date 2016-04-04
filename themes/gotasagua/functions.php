@@ -1,10 +1,29 @@
 <?php
 
-/***********************************************************************************************/
+/******************************************************************************************/
 /* 	Define Constants */
-/***********************************************************************************************/
+/******************************************************************************************/
 define('THEMEROOT', get_stylesheet_directory_uri());
 define('IMAGES', THEMEROOT.'/images');
+
+/*******************************************************************************************/
+/* Customizar Logo Login de WORDPRESS ADMIN PANEL */
+/*******************************************************************************************/
+
+function login_logo(){ ?>	
+	<style type="text/css">
+		body.login #login h1 a{
+			background-image: url( "<?= IMAGES ?>/custom-login-logo.jpg" );
+		}
+	</style>
+<?php }
+
+add_action('login_enqueue_scripts','login_logo');
+
+function login_logo_url(){ return get_bloginfo('url'); }
+
+add_action('login_headerurl','login_logo_url');
+
 
 /***********************************************************************************************/
 /* Load JS Files */
